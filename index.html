@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Todo List</title>
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+
+    </head>
+
+    <body class style="background-color: #F5F5F5;">
+        <h1 class="display-1 text-center mt-4"><strong><span
+                    class="main-heading">todos</span></strong></h1>
+        <main>
+            <section>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-sm-12 col-md-10">
+                            <div class>
+                                <div class="  border rounded-0">
+                                    <div class=" rounded-0">
+                                        <form id="todo-form"
+                                            onsubmit="validate()"
+                                            method="post">
+                                            <div class="input-group ">
+                                                <div
+                                                    class="input-group rounded-0">
+
+                                                    <button id="ckbCheckAll"
+                                                        type="button"
+                                                        value="false"
+                                                        class="input-group-text dropbtn-button bg-light p-0 border border-end-0 rounded-0">
+                                                        <img
+                                                            src="./images/down-arrow.png"
+                                                            alt
+                                                            class="ms-auto me-auto"
+                                                            width="35px"
+                                                            height="35px">
+                                                    </button>
+
+                                                    <input type="text" id="task"
+                                                        class="form-control form-control-lg border border-start-0 rounded-0"
+                                                        id="todo-input"
+                                                        placeholder="What needs to be done?">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </h2>
+                                    <div id="view">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="bottom-btns rounded-0 py-1 px-2 border">
+                                <div class="row  align-items-center ">
+                                    <div class="col-sm-4">
+                                        <p class="m-0 ms-2"><span
+                                                class="count"></span>
+                                            iteam
+                                            left</p>
+                                    </div>
+                                    <div
+                                        class="col-sm-4 d-flex justify-content-center">
+                                        <button type="button"
+                                            class="bottom-btns btn btn-outline-secondary"
+                                            id="all"
+                                            onclick="viewAllTask(['active','completed'])">All</button>
+                                        <button type="button"
+                                            class="bottom-btns btn  px-1"
+                                            id="active"
+                                            onclick="viewAllTask(['active'])">Active</button>
+                                        <button type="button"
+                                            class="bottom-btns btn btn-outline"
+                                            id="completed"
+                                            onclick="viewAllTask(['completed'])">Completed</button>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <button type="button"
+                                            class="bottom-btns btn btn-outline"
+                                            onclick="clearCompleted()">Clear
+                                            completed</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bottom-pages">
+                                <div class="pages-1 border border-top-0"></div>
+                                <div class="pages-2 border border-top-0"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="./js/bootstrap.bundle.min.js"></script>
+        <script src="./js/toda.js"></script>
+    </body>
+
+</html>

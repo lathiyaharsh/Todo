@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    counter-reset: taskCount;
+}
+#task::-webkit-input-placeholder ,.main-heading, .accordion-btn-color { 
+    color: #EBD7D8 !important; 
+}
+.dropbtn-button{
+    width: 50px;
+}
+
+.tasks , .tasks-main{
+    background-color: #fff;
+}
+.tasks-main{
+
+}
+.task-name{
+
+}
+.bottom-btns{
+    width: 100%;
+    background-color:#fff;
+    color: #8f8f8f;
+}
+.bottom-pages{
+    width: 100%;
+    background-color:#fff;
+    color: #8f8f8f;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+}
+.pages-1{
+    position: absolute;
+    width: calc(100% - 2%);
+    background-color: #fff;
+    height: 10px;
+    z-index: -1;
+    bottom: -5px;
+    
+}
+.pages-2{
+    position: absolute;
+    width: calc(100% - 3%);
+    background-color: #fff;
+    height: 15px;
+    z-index: -2;
+    bottom: -9px;
+}
+
+.form-check-input[type=checkbox]{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+.form-check-input:checked[type=checkbox]{
+    background-color: transparent !important; 
+    border: 1px solid #EBD7D8;
+    position: relative;
+    
+}
+.form-check-input:checked[type=checkbox]::after{
+    content: "";
+    background-color: transparent !important; 
+    background-image: url(../images//tick.png ) ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    border: 1px solid #8f8f8f;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: none;
+}
+.updateInput{
+    display: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    color: #8f8f8f !important;
+}
+.taskCounter::before{
+    counter-increment: taskCount;
+    content: counter(taskCount);
+    color: transparent;
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+.count::before{
+    content: counter(taskCount);
+}
